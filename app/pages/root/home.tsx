@@ -1,6 +1,6 @@
 import Sidebar from "../../components/sidebar";
 import { GreetingTile } from "../../components/greetingTile";
-import { GreetingText } from "../../components/greetingText";
+import TypingText  from "../../components/typingText";
 
 export function Main() {
   return (
@@ -10,7 +10,7 @@ export function Main() {
       </div>
       <div className="flex flex-col">
         <div>
-          <GreetingText />
+          <TypingText text="Welcome To My Website!" />
           {/* <h1 className="text-4xl font-bold text-center mb-4">Welcome to My Website!</h1> */}
         </div>
         <div className="flex flex-row items-center justify-center mb-4">
