@@ -4,13 +4,13 @@ import TypingText  from "../../components/typingText";
 
 export function Main() {
   return (
-    <main className="grid grid-cols-[10%_90%]">
-      <div className="ml-4">
+    <main className="grid grid-cols-[3%_97%]">
+      <div className="ml-8">
         <Sidebar />
       </div>
       <div className="flex flex-col">
         <div>
-          <TypingText text="Welcome To My Website!" />
+          <TypingText text="Welcome!" speed={125} />
           {/* <h1 className="text-4xl font-bold text-center mb-4">Welcome to My Website!</h1> */}
         </div>
         <div className="flex flex-row items-center justify-center mb-4">

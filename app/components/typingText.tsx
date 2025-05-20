@@ -20,7 +20,7 @@ const TypingText: React.FC<TypingTextProps> = ({ text="", speed = 100 }) => {
     }
   }, [text, index, speed]);
 
-  return <h1 className="text-lg text-center mb-4">{displayedText}</h1>;
+  return <h1 className="text-5xl text-center my-4">{displayedText}</h1>;
 };
 
 export default TypingText;
