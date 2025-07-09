@@ -5,9 +5,10 @@ interface TypingTextProps {
   speed?: number;
 }
 
-const TypingText: React.FC<TypingTextProps> = ({ text="", speed = 100 }) => {
+const TypingText: React.FC<TypingTextProps> = ({ text = "", speed = 100 }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [index, setIndex] = useState(0);
+  const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
     if (index < text.length) {
@@ -20,7 +21,22 @@ const TypingText: React.FC<TypingTextProps> = ({ text="", speed = 100 }) => {
     }
   }, [text, index, speed]);
 
-  return <h1 className="text-5xl text-center mb-4">{displayedText}</h1>;
+  // Blinking cursor effect (always blinking)
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
+    return () => clearInterval(cursorInterval);
+  }, []);
+
+  return (
+    <h1 className="text-5xl text-center mb-4">
+      {displayedText}
+      <span className="inline-block w-2">
+        {showCursor ? '|' : ''}
+      </span>
+    </h1>
+  );
 };
 
 export default TypingText;

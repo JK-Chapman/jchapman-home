@@ -1,34 +1,26 @@
 import NavBar from "../../components/navbar";
 import { GreetingTile } from "../../components/greetingTile";
-import TypingText  from "../../components/typingText";
+import TypingText from "../../components/typingText";
 
 export function Main() {
   return (
-    <main className="grid grid-rows-[auto_1fr] h-screen min-h-0">
-      <div className="h-full mb-3">
+    <main className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 h-screen min-h-0 grid grid-rows-[auto_1fr]">
+      <div className="h-full">
         <NavBar />
       </div>
-      <div className="flex justify-between mb-2 h-full overflow-auto">
-        <div className="flex-col">
-          <div className="flex-row ml-4">
-            <div>
-              <TypingText text="Welcome!" speed={125} />
-            </div>
-          </div>
-          <div className="flex-row items-center justify-center mb-4">
-            B
-          </div>
-          <div className="flex-row items-center justify-center mb-4">
-            C
+      <div className="flex flex-col md:flex-row items-center justify-center h-full gap-12 px-4">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <TypingText text="Welcome!" speed={150} />
+          <div className="mt-4 text-lg text-gray-400 max-w-md">
+            <p>
+              I'm Jon Chapman, a full stack developer with a passion for creating awesome applications, solving challenging problems, and learning new technologies!
+            </p>
           </div>
         </div>
-        <div className="flex-col">
-          <div className="flex-row">
-            <GreetingTile />
-          </div>
+        <div className="flex justify-center">
+          <GreetingTile />
         </div>
       </div>
     </main>
   );
 }
-
