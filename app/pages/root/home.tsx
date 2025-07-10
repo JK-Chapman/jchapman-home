@@ -124,12 +124,12 @@ const projects: ProjectInfo[] = [
     name: "Beer Bot!",
     icon: faRobot,
     description: "A work-in-progress Discord bot that will reward points to users that prove they have a beer in hand!",
-    imageUrl: undefined, // Replace with your actual image path or leave undefined
+    imageUrl: undefined
   },
   {
     name: "Project Rocket Tennis",
     icon: faRocket,
     description: "A work-in-progress local multiplayer video game about deflecting rockets to your opponents.",
-    imageUrl: undefined, // Replace with your actual image path or leave undefined
+    imageUrl: undefined
   },
 ];
