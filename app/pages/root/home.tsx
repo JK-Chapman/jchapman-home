@@ -3,13 +3,14 @@ import { GreetingTile } from "../../components/greetingTile";
 import TypingText from "../../components/typingText";
 import { ResumeCard } from "../../components/resumeCard";
 import type { JobInfo } from "../../components/resumeCard";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRobot } from '@fortawesome/free-solid-svg-icons'
+import { faRocket } from '@fortawesome/free-solid-svg-icons'
 
 export function Main() {
   return (
-    <main className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 min-h-screen min-h-0 grid grid-rows-[auto_1fr]">
-      <div className="h-full mb-2">
-        <NavBar />
-      </div>
+    <main id="about" className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 min-h-screen min-h-0 grid grid-rows-[auto_1fr]">
+      <NavBar />
       <div className="flex flex-col md:flex-row items-center justify-center h-full gap-12 px-4">
         <div>
           <TypingText text="Welcome!" speed={150} />
@@ -23,8 +24,9 @@ export function Main() {
           <GreetingTile />
         </div>
       </div>
+      <div id="experience"> <p  className="hidden">t</p></div>
       <div className="flex flex-row items-center justify-center h-full gap-12 pt-4">
-        <h1 className="text-5xl">My Experience</h1>
+        <h1  className="text-5xl">My Experience</h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
           {jobs.map((job, idx) => (
@@ -33,13 +35,31 @@ export function Main() {
               {...job}/>
           ))}
       </div>
-      <div className="flex flex-row items-center justify-center h-full gap-12 pt-4">
+      <div id="projects" className="flex flex-row items-center justify-center h-full gap-12 pt-4">
         <h1 className="text-5xl">Projects</h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
-          <div className="block p-6 max-w-md max-h-md bg-slate-900 border border-slate-400 rounded-lg shadow-sm hover:bg-slate-800 transition-colors duration-300">
-            <p>TEST!</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 p-4">
+          <div className="block p-6 my-2 max-h-md bg-slate-900 border border-slate-400 rounded-lg shadow-sm hover:bg-slate-800 transition-colors duration-300">
+            <h1 className="flex flex-row text-2xl mb-2">
+              Beer Bot! <FontAwesomeIcon className="fa-md ml-2" icon={faRobot}/>
+            </h1>
+            <div className="flex flex-row">
+              <img className="flex-col w-20 h-20 object-cover border-4 border-white-700" alt="ProjectDesc1" />
+              <p className="flex-col ml-2">A work-in-progress Discord bot that will reward points to users that prove they have a beer in hand!</p>
+            </div>
           </div>
+          <div className="block p-6 my-2 max-h-md bg-slate-900 border border-slate-400 rounded-lg shadow-sm hover:bg-slate-800 transition-colors duration-300">
+            <h1 className="flex flex-row text-2xl mb-2">
+              Project Rocket Tennis <FontAwesomeIcon className="fa-md ml-2" icon={faRocket}/>
+            </h1>
+            <div className="flex flex-row">
+              <img className="flex-col w-20 h-20 object-cover border-4 border-white-700" alt="ProjectDesc2" />
+              <p className="flex-col ml-2">A work-in-progress local multiplayer video game about deflecting rockets to your opponents.</p>
+            </div>
+          </div>
+      </div>
+      <div id="contact" className="flex flex-row items-center justify-center h-full gap-12 pt-4">
+        <h1 className="text-5xl">Contact Me</h1>
       </div>
     </main>
   );
