@@ -22,7 +22,7 @@ export function ResumeCard(jobInfo: JobInfo) {
           <p className="text-md">
             <ul className="block text-md text-gray-300">
                 {jobInfo.bullets?.map((bullet, index) => (
-                    <li key={index} className="font-bold mb-2">• {bullet}</li>
+                    <li key={index} className="mb-2">• {bullet}</li>
                 ))}
             </ul>
           </p>

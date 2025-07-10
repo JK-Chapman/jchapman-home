@@ -2,12 +2,13 @@ import NavBar from "../../components/navbar";
 import { GreetingTile } from "../../components/greetingTile";
 import TypingText from "../../components/typingText";
 import { ResumeCard } from "../../components/resumeCard";
-import type { JobInfo } from "../../components/resumeCard";
 import { ProjectCard } from "../../components/projectCard";
-import type { ProjectInfo } from "../../components/projectCard";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRobot } from '@fortawesome/free-solid-svg-icons'
 import { faRocket } from '@fortawesome/free-solid-svg-icons'
+import ContactForm from "../../components/contactForm";
+
+import type { JobInfo } from "../../components/resumeCard";
+import type { ProjectInfo } from "../../components/projectCard";
 
 export function Main() {
   return (
@@ -45,8 +46,9 @@ export function Main() {
           <ProjectCard key={idx} {...project} />
         ))}
       </div>
-      <div id="contact" className="flex flex-row items-center justify-center h-full gap-12 pt-4">
+      <div id="contact" className="flex flex-col items-center justify-center h-full gap-8 pt-4 pb-6">
         <h1 className="text-5xl">Contact Me</h1>
+        <ContactForm />
       </div>
     </main>
   );
