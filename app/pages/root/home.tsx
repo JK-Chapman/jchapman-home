@@ -30,9 +30,16 @@ export function Main() {
           {jobs.map((job, idx) => (
             <ResumeCard
               key={idx}
-              {...job}
-            />
+              {...job}/>
           ))}
+      </div>
+      <div className="flex flex-row items-center justify-center h-full gap-12 pt-4">
+        <h1 className="text-5xl">Projects</h1>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+          <div className="block p-6 max-w-md max-h-md bg-slate-900 border border-slate-400 rounded-lg shadow-sm hover:bg-slate-800 transition-colors duration-300">
+            <p>TEST!</p>
+          </div>
       </div>
     </main>
   );
@@ -87,11 +94,18 @@ const jobs: JobInfo[] = [
     startDate: "05/2020",
     endDate: "08/2020",
     bullets: [
-      "Developed a custom internal web based suite of applications that helped assist and automate work processes using Python, Flask and MySQL.",
-      "Worked alongside department and team leads to design efficient automation and data entry applications.",
-      "Implemented CI/CD pipelines for faster deployments.",
-      "Debugged issues from customer tickets and developed fixes for them.",
-      "Developed web interfaces for data reports using Python, Flask, and SQLAlchemy ORM.",
+      "Continued development of test automation software, adding new features and refining backend performance.",
+      "Developed GUIs for other battery hardware in Python.",
+    ]
+  },
+  {
+    company: "Volta Power Systems",
+    position: "Software Developer Intern",
+    location: "HOLLAND, MI",
+    startDate: "05/2019",
+    endDate: "08/2019",
+    bullets: [
+      "Developed a user-friendly GUI and backend to automate end of line testing tasks on HIL (hardware-in-the-loop) systems in C#. The software allows the creation and sending of CAN message sequences for reading and writing.",
     ]
   },
 ];

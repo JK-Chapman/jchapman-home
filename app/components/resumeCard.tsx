@@ -11,7 +11,7 @@ export type JobInfo = {
 export function ResumeCard(jobInfo: JobInfo) {
     return (
         <div className="block p-6 bg-slate-900 border border-slate-400 rounded-lg shadow-sm hover:bg-slate-800 transition-colors duration-300">
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row justify-between mb-1">
             <h2 className="text-xl">{jobInfo.company}; {jobInfo.position}</h2>
           </div>
           <div className="flex flex-row justify-between">
