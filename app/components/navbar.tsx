@@ -9,7 +9,7 @@ const NavBar = () => {
         <div className="sticky top-0 flex flex-row justify-start mb-2 bg-gray-900/95 p-4 shadow-md border-b border-gray-800 z-50">
             <div className="text-white items-center text-2xl font-bold mr-5 pr-5">
                 <a href="#about" className="text-gray-300 hover:text-white">
-                    JC
+                    Jon Chapman
                 </a>
             </div>
             {/* Hamburger icon for mobile */}
