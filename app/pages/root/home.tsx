@@ -73,7 +73,7 @@ const jobs: JobInfo[] = [
     position: "Applications Developer I",
     location: "GRAND RAPIDS, MI",
     startDate: "06/2022",
-    endDate: "07/2025",
+    endDate: "06/2025",
     bullets: [
       "Developed an inventory tracking system API and suite of inventory web apps (single page application utilizing Vue.js) and integrated them into existing workflow management software, enhancing inventory accuracy from below 50% to over 85%.",
       "Designed and implemented a company dashboard web application (including new stored procedures, database tables, and API) with live updating features implemented via SignalR. This eliminated a manually updated google sheet, saving the production team hours of manual data entry per day.",
