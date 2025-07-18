@@ -6,6 +6,8 @@ import { ProjectCard } from "../../components/projectCard";
 import { faRobot } from '@fortawesome/free-solid-svg-icons'
 import { faRocket } from '@fortawesome/free-solid-svg-icons'
 import ContactForm from "../../components/contactForm";
+import beerBotIcon from '../../resources/discProjectIcon.png';
+import tennisIcon from '../../resources/tennisProjectIcon.png';
 
 import type { JobInfo } from "../../components/resumeCard";
 import type { ProjectInfo } from "../../components/projectCard";
@@ -124,12 +126,12 @@ const projects: ProjectInfo[] = [
     name: "Beer Bot!",
     icon: faRobot,
     description: "A work-in-progress Discord bot that will reward points to users that prove they have a beer in hand!",
-    imageUrl: undefined
+    imageUrl: beerBotIcon
   },
   {
     name: "Project Rocket Tennis",
     icon: faRocket,
     description: "A work-in-progress local multiplayer video game about deflecting rockets to your opponents.",
-    imageUrl: undefined
+    imageUrl: tennisIcon
   },
 ];

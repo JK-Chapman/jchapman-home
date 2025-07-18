@@ -14,8 +14,8 @@ export function ProjectCard(projectInfo: ProjectInfo) {
             <h1 className="flex flex-row text-2xl mb-2">
                 {projectInfo.name} <FontAwesomeIcon className="fa-md ml-2" icon={projectInfo.icon}/>
             </h1>
-            <div className="flex flex-row">
-                <img className="flex-col w-20 h-20 object-cover border-4 border-white-700" alt="ProjectDescription" src={projectInfo.imageUrl} />
+            <div className="flex flex-row items-center">
+                <img className="flex-col w-20 h-20 object-cover mr-2 border-2 p-2" alt="ProjectDescription" src={projectInfo.imageUrl} />
                 <p className="flex-col ml-2">{projectInfo.description}</p>
             </div>
         </div>
