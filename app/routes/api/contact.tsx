@@ -7,8 +7,8 @@ export async function action({ request }: ActionFunctionArgs) {
 
   try {
     await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>",
-      to: "jonkchpmn@email.com", // <-- change to your email
+      from: "Contact Form <contact@jonchapman.dev>",
+      to: "jonkchpmn@gmail.com",
       subject: `Contact from ${name}`,
       replyTo: email,
       html: `<p><strong>Name:</strong> ${name}<br/><strong>Email:</strong> ${email}</p><p>${message}</p>`,
